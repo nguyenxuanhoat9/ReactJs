@@ -15,68 +15,112 @@ code {
   margin: 0;
   padding: 0;
 }
-body {
-  font-family: arial;
-  font-size: 18px;
-  color: #666;
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #3b3a3f;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
-a {
-  color: #333;
+#progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s ease-in-out;
 }
 
-h2,
-h3,
-#slide h5 {
-  font-size: 36px;
-  text-transform: capitalize;
+p {
+  margin: 0;
+  color: #00ce9b;
+  font-weight: 700;
 }
 
-h3 {
+#result {
+  padding: 60px 0 0;
+  font-size: 80px;
+  line-height: 60px;
+}
+
+#sec {
   font-size: 28px;
 }
 
-h4 {
-  font-size: 24px;
+#start,
+#stop {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
 }
 
-h2,
-h3,
-h4 {
-  margin-bottom: 25px;
+#start {
+  background: #4897f0;
 }
 
-.section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+#start:hover {
+  background: #4087d8;
 }
 
-.bg-black {
-  background: #000;
+#stop {
+  background: #00ce9b;
 }
 
-.bg-white {
-  background: #fff;
+#stop:hover {
+  background: #00b98b;
 }
 
-#footer ul {
+#start:active,
+#stop:active {
+  top: 1px;
+}
+
+#plus {
+  width: 100%;
   padding: 0;
+  outline: 0;
+  border: 0;
+  color: #aaa;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: FontAwesome, sans-serif;
 }
 
-#footer ul li {
-  list-style: none;
+#minus {
+  width: 100%;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  color: #aaa;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: FontAwesome, sans-serif;
 }
-#main {
-  margin: auto;
-  width: 50%;
-  height: auto;
-  background: #FF9600;
-  padding: 20px;
-  border-radius: 5px;
-  margin-top: 50px;
+
+#pm {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  opacity: 0.1;
+  z-index: 9999;
 }
-#main h3{
-  font-size: 200px;
-  font-weight: bold;
-  color: #FFF;
+
+.container:hover>#pm {
+  opacity: 1;
+}
+
+.buttons {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
 }

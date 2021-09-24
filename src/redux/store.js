@@ -1,13 +1,16 @@
 import { createStore } from "redux";
 
 const defaultState ={
-  num: 10 
+  time: 10 
 }
 const reducers = (state = defaultState, action) =>{
   switch (action.type){
-    case "GET": return {num: Math.ceil(Math.random()*10)}
-    case "RESET": return defaultState
+    case "UP" : return {time: state.time + 1};
+    case "START" : return {time: state.time - 1};
+    case "DOWN": return {time: state.time - 1};
+    case "STOP": return state.time
     default: return state
+    break;
   }
 }
 
